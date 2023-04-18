@@ -1,0 +1,53 @@
+.toggle-button{
+  width: '600px';
+}
+
+/* Hide the input element from view */
+.toggle-button__state {
+    appearance: none;
+    position: absolute;
+  }
+  
+  /* Style the span after the input like a button */
+  .toggle-button__text {
+    cursor: pointer;
+    display: block;
+    padding:  .8rem 1rem;
+    border-radius: 15px;
+    border: 1px solid #055adb;
+    border-radius: 3px;
+    text-align: center;
+    color: 'white';
+    font-weight: 500;
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  
+  /* When the input is selected, style the span as selected */
+  .toggle-button__state:checked + .toggle-button__text  {
+    background-color: #1e88e5;
+    font-weight: 500;
+    transform: scale(1.01); /* increase the size by 10% */
+
+    color: white;
+    
+  }
+
+  .toggle-button__state:not(:checked) + .toggle-button__text {
+    transform: scale(1);
+  }
+  .toggle-button__text:hover {
+    background-color: #2196f3;
+    color: white;
+
+  }
+
+  .selected .toggle-button__text {
+    background-color: #1e88e5;
+    color: white;
+  }
+  
+  .selected .toggle-button__text:hover {
+    background-color: #2196f3;
+    color: white;
+  }
